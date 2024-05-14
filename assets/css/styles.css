@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* creando el Layout y cambiando tipo de letra */
+
+body {
+    font-family: "Raleway", sans-serif;
+    display: grid;
+    grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "section"
+        "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.3fr 11fr 1fr 1fr;
+    height: 100vh;
+}
+
+/* css del nav */
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.empresa {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: #FFF;
+}
+
+.empresa i {
+    margin-right: 15px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    font-size: 1.5rem ;
+    color: #FFF;
+}
+
+/* css del header */
+
+header {
+    grid-area: header;
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header select {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* css del main */
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    border: 1px solid grey;
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 15px 0;
+}
+
+.card a {
+    padding: 10px 15px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: blue;
+}
+
+/* css del section */
+
+section {
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+section a {
+    text-decoration: none;
+    color: blue;
+    padding: 10px 15px;
+    border: 1px solid grey;
+    
+}
+
+/* css del footer */
+
+footer {
+    grid-area: footer;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+footer p, .icons {
+    color: white;
+}
+
+

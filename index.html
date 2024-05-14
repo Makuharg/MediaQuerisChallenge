@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--link de iconos .empresa y .menu-->
+    <script src="https://kit.fontawesome.com/0412d14843.js" crossorigin="anonymous"></script>
+
+    <!-- link a iconos de redes sociales-->   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- link a Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
+    <!--link de css-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- agregando navbar -->
+    <nav>
+        <div class="empresa">
+            <i class="fa-solid fa-display"></i>
+            <p>Graphic Cards</p>
+        </div>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>       
+    </nav>
+
+    <!-- agregando header -->
+    <header>
+        <p>Ordenar Por:</p>
+        <select>
+            <option value="precio">Precio</option>
+            <option value="fecha">Fecha</option>
+        </select>            
+    </header>
+
+    <!-- agregando main -->
+    <main>
+        <div class="card">
+            <img src="assets/imgs/graphicard.jpg" alt="">
+            <p>Model: GTX 1080Ti</p>
+            <a href="#">Ver Más</a>
+        </div>
+    </main>
+
+    <!-- agregando section -->
+    <section>
+        <a href="#"><p><</p></a>
+        <a href="#"><p>1</p></a>
+        <a href="#"><p>2</p></a>
+        <a href="#"><p>3</p></a>
+        <a href="#"><p>></p></a>
+    </section>
+
+    <!-- agregando footer -->
+    <footer>
+        <div>
+            <a href="#">
+                <ion-icon class="icons" name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon class="icons" name="logo-instagram"></ion-icon>
+            </a>               
+        </div>
+        <div>
+            <p>Todos los derechos reservados</p>
+        </div>
+    </footer>
+      
+</body>
+</html>
