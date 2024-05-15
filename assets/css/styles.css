@@ -48,6 +48,10 @@ nav {
     color: #FFF;
 }
 
+.menu-links {
+    display: none;
+}
+
 /* css del header */
 
 header {
@@ -72,11 +76,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding-top: 35px;
+    row-gap: 45px;
 }
 
 .card {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
     align-items: center;
     width: 90%;
     height: 90%;
@@ -110,7 +118,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: start;
-    
+    padding-top: 10px;
 }
 
 section a {
@@ -135,6 +143,79 @@ footer {
 
 footer p, .icons {
     color: white;
+}
+
+.icons {
+    font-size: 1.3rem;
+}
+
+/* adaptando la pagina a tablets (576px) */
+
+@media (width >= 576px) {
+    body {
+        grid-template-areas: 
+            "nav nav"
+            "header main"
+            "header section"
+            "footer footer"
+        ;
+        grid-template-columns: 1fr 10fr;
+        grid-template-rows: 0.5fr 6fr 0.6fr 0.5fr;
+    }
+
+    /* modificando CSS del menu */
+
+    .menu i {
+        display: none;
+    }
+
+    .menu-links {
+        display: flex;
+        padding: 0 10px;
+    }
+
+    .menu-links li {
+        list-style-type: none;
+        padding: 0 20px;
+        display: flex;
+    }
+
+    .menu-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+    }
+
+    /* modificando css del header */
+
+    header {
+        padding-top: 15px;
+        justify-content: start;
+    }
+
+    header select {
+        width: 100px;
+        margin: 20px 40px;
+    }
+
+    /* modificando css del main */
+
+    main {
+        column-gap: 20px;
+        padding-top: 20px;
+    }
+
+    .card {
+        width: 45%;
+        height: 92%;
+    }
+
+    /* modificando css del section */
+
+    section {
+        padding-bottom: 20px;
+    }
+
 }
 
 
