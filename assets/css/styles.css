@@ -24,7 +24,7 @@ body {
 
 nav {
     grid-area: nav;
-    background-color: blue;
+    background-color: rgb(22, 70, 147);
     display: flex;
     justify-content: space-between;
 }
@@ -78,7 +78,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
     overflow-y: auto;
-    padding-top: 35px;
+    padding: 35px 0;
     row-gap: 45px;
 }
 
@@ -90,6 +90,7 @@ main {
     height: 90%;
     border: 1px solid grey;
     padding-bottom: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -117,16 +118,14 @@ section {
     grid-area: section;
     display: flex;
     justify-content: center;
-    align-items: start;
-    padding-top: 10px;
+    align-items: center;
 }
 
 section a {
     text-decoration: none;
     color: blue;
     padding: 10px 15px;
-    border: 1px solid grey;
-    
+    border: 1px solid grey;   
 }
 
 /* css del footer */
@@ -138,7 +137,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: rgb(15, 15, 137);
 }
 
 footer p, .icons {
@@ -152,6 +151,9 @@ footer p, .icons {
 /* adaptando la pagina a tablets (576px) */
 
 @media (width >= 576px) {
+
+    /*Modificando el layout */
+
     body {
         grid-template-areas: 
             "nav nav"
@@ -163,7 +165,7 @@ footer p, .icons {
         grid-template-rows: 0.5fr 6fr 0.6fr 0.5fr;
     }
 
-    /* modificando CSS del menu */
+    /* modificando CSS del nav */
 
     .menu i {
         display: none;
@@ -209,13 +211,84 @@ footer p, .icons {
         width: 45%;
         height: 92%;
     }
+}
 
-    /* modificando css del section */
+/* adaptando a Escritorio */
 
-    section {
-        padding-bottom: 20px;
+@media (width >= 992px) {
+
+    /*Modificando el layout */
+
+    body {
+        grid-template-areas: 
+            "nav header"
+            "nav main"
+            "footer section"  
+        ;
+        grid-template-columns: 2fr 10fr;
+        min-height: 100vh;
+        grid-template-rows: 1fr 10fr 1fr;
+    }
+
+   /* modificando CSS del nav */
+
+    nav {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .empresa {
+        padding-top: 20px;
+        padding-left: 0;
+    }
+
+    .empresa i {
+        margin-right: 5px;
+    }
+
+    .menu {
+        padding-right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .menu ul li {
+        padding: 10px 0;
+    }
+
+    /* modificando CSS del header */
+
+    header {
+        height: 7vh;
+    }
+
+    header select {
+        width: 80%;
+        margin: 0;
+    }
+
+    /* modificando CSS del main */
+
+    main {
+        row-gap: 10px;
+    }
+
+    .card {
+        width: 22%;
+        height: 55%;
+    }
+
+    /* modificando CSS del footer */
+
+    footer {
+        text-align: center;
+        padding-bottom: 15px;
     }
 
 }
-
 
