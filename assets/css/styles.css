@@ -138,6 +138,12 @@ section a:hover {
     color: #FFF;
 }
 
+.active {
+    border: 1px solid rgb(15, 15, 137);
+    background-color: rgb(15, 15, 137);
+    color: #FFF;
+}
+
 /* css del footer */
 
 footer {
